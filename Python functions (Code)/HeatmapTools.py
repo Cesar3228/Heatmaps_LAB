@@ -116,3 +116,24 @@ def plot_heatmap_overlay(x, y, title, output_file, maze_image_path, vmin_opt=Non
 
 
 
+def main():
+    """
+    si hay error por la función main() no definida, tal vez podrías agregar algo así
+    """
+    directory = "path/directorio"
+    output_file = "heatmap_output.png"
+    maze_image_path = "path/maze_image.png"
+    
+    # Cargar y preparar archivos
+    df_combined = cargar_preparar_archivos(directory)
+    
+    # Normalizar coordenadas (si es necesario)
+    # df_combined = normalizar_coordenadas(df_combined, df_combined)
+    
+    # Graficar heatmap con la imagen del laberinto
+    plot_heatmap_overlay(df_combined['Centre position X'], df_combined['Centre position Y'], 
+                         title="Heatmap con Maze", output_file=output_file, 
+                         maze_image_path=maze_image_path)
+    
+if __name__ == "__main__":
+    main()
