@@ -59,7 +59,7 @@ def combinar_dfs(df1, df2):
 
 
 # %%
-def plot_heatmap_overlay(x, y, title, output_file, maze_image_path, vmin_opt=None, vmax_opt=None, alpha=0.8):
+def plot_heatmap_overlay(x, y, title, output_file, maze_image_path, vmin_opt=None, vmax_opt=None, alpha=0.8, extent=None):
     """
     NUEVO:
     agregar una figura del laberinto para que se plotee bajo el mapa de calor
@@ -67,6 +67,10 @@ def plot_heatmap_overlay(x, y, title, output_file, maze_image_path, vmin_opt=Non
     # cargar imagen del lab
     maze_img = mpimg.imread(maze_image_path)
 
+    # Si no se proporciona extent, usar un valor por defecto
+    if extent is None:
+        extent = [97, 474, 148, 453]
+        
     # kde y vmin vmax
     kde = gaussian_kde([x, y], bw_method=0.5)
     kde_values = kde([x, y])
@@ -81,7 +85,7 @@ def plot_heatmap_overlay(x, y, title, output_file, maze_image_path, vmin_opt=Non
 
     # figura del laberinto
     # Ajustar la imagen del laberinto para que se vea bien en los datos
-    ax.imshow(maze_img, extent=[97, 474, 148, 453], aspect='auto')
+    ax.imshow(maze_img, extent=extent, aspect='auto')
 # "IRR=[101, 474, 135, 445]", "Control-NoEE=[101, 474, 84, 398]", "Control-EE=[97, 474, 84, 398]", "CUMS-EE=[97, 474, 84, 398]", "CUMS-NoEE=[140, 520, 84, 390]", "Sham=[97, 474, 148, 453]"
 
 
