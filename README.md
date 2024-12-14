@@ -34,4 +34,4 @@ This is a brief explanation on how the function work.
 
 
 
-The main code was written by Cesar3228, the Data was obtain by Jimena A. for her masters degree, the functions were compiled by Santiago R. and all the work was verify by Jimena A. and Monserrat S.
+The main code was written by Cesar3228, experimental behavioral data was obtained by Jimena A. P. for her masters degree, the functions were compiled by Santiago G. R. and suggestions, some corrections, and assessment of the code was done by Monserrat S. B., Santiago G. R. and Jimena A. P.
