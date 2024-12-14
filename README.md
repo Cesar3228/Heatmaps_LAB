@@ -26,7 +26,7 @@ Data comes from research conducted at the Faculty of Sciences of the National Au
 
 This is a brief explanation on how the function work.
 
-  - From line 1-11: Contains the libraries used.
+  - From line 1-11: Contains the libraries that were used.
   - From line 13-27: The "cargar_prepara_archivos" function loads all csv files from a speccified directory, concatenates them into a single dataframe, removes the NA values and resets the index for the new dataframe.
   - From line 31-46: The "normalizar_coordenadas" function normalizes X and Y coordinates in the input dataframe(df) to match the scale of the reference dataframe (ref_df).
   - From line 49-53: The "combinar_dfs" function combines two dataframes.
