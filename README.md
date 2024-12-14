@@ -26,11 +26,11 @@ Data comes from research conducted at the Faculty of Sciences of the National Au
 
 This is a brief explanation on how the function work.
 
-  - From line 1-15: Contains the if statement and libraries used.
-  - From line 18-31: The "cargar_prepara_archivos" function loads all csv files from a speccified directory, concatenates them into a single dataframe, removes the NA values and resets the index for the new dataframe.
-  - From line 36-50: The "normalizar_coordenadas" function normalizes X and Y coordinates in the input dataframe(df) to match the scale of the reference dataframe (ref_df).
-  - From line 53-57: The "combinar_dfs" function combines two dataframes.
-  - From line 62-119: The "plot_heatmap_overlay" function creates a heatmap overlaing the spatial distribution of points on a maze image. The important points of this function are the "Kernel Density Estimation(KDE)" which computes a KDE using gaussian_kde and dynamically adjusts the bandwith using bw_method, the "Density Scaling" which calculates KDE values at the X and Y points and sets optimal parameters(vmin_opt, vmax_opt) that go from blue to red.
+  - From line 1-11: Contains the libraries used.
+  - From line 13-27: The "cargar_prepara_archivos" function loads all csv files from a speccified directory, concatenates them into a single dataframe, removes the NA values and resets the index for the new dataframe.
+  - From line 31-46: The "normalizar_coordenadas" function normalizes X and Y coordinates in the input dataframe(df) to match the scale of the reference dataframe (ref_df).
+  - From line 49-53: The "combinar_dfs" function combines two dataframes.
+  - From line 58-115: The "plot_heatmap_overlay" function creates a heatmap overlaing the spatial distribution of points on a maze image. The important points of this function are the "Kernel Density Estimation(KDE)" which computes a KDE using gaussian_kde and dynamically adjusts the bandwith using bw_method, the "Density Scaling" which calculates KDE values at the X and Y points and sets optimal parameters(vmin_opt, vmax_opt) that go from blue to red.
 
 
 
